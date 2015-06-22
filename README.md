@@ -70,6 +70,9 @@ To create a new MPLAB Harmony application with MHC, follow these four steps:
 
 3. Ensure that the Install check box for the plug-in is selected and click Install.
 
+![alt text](/images/step1.3.png)
+
+
 4. Follow the prompts from the installation and continue until the installation completes. (Do not be concerned if the version you're installing is signed but not trusted, simply click Continue). Once the installation has finished you can close the Plugins dialog.
 5. To verify the installation, select Tools > Plugins and select the Installed tab. The MHC plug-in you installed should be included in the list.
 
@@ -79,6 +82,9 @@ To create a new MPLAB Harmony application with MHC, follow these four steps:
 1. Select File > New Project or click the New Project icon in MPLAB X IDE.
 
 2. In Categories, select Microchip Embedded and in Projects select MPLAB Harmony Project from the list of available project templates, and then click Next to launch the Microchip Harmony Configurator Project Wizard.
+
+![alt text](/images/step2.2.png)
+
 
 3. Specify the following in the New Project dialog:
 
@@ -91,6 +97,8 @@ To create a new MPLAB Harmony application with MHC, follow these four steps:
 	• Configuration Name (optional)
 
 	• Target Device (when a valid harmony path is selected, the device selection menu will be 	filled)
+	
+![alt text](/images/step2.3.png)
 
 
 
