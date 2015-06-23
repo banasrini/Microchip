@@ -13,8 +13,13 @@ Microchip Technology is an American manufacturer of microcontroller, memory and 
 
 ### what the demo is about- concept
 
-This demo takes you through the initial steps of running the MPLAB harmony IDE
-### what are the applications of this collaboration
+This demo shows you how to run PubNub on Microchip, in order to facilitate realtime communication between Microchip hardware and any other device, be it mobile or web. This will power IoT, allowing for bi-directional flow of data between different endpoints to and from Microchip hardware. I will show you how to control the LEDs on the [Ethernet starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004) from Microchip, and to send messages from the chip to the [PubNub Developer console](http://www.pubnub.com/console/). 
+
+IMAGE FOR THE DEMO - JUST LIKE THE ATMEL ONE. 
+
+http://g.recordit.co/nr3g85PC9O.gif 
+
+
 
 ##OVERALL STEPS TO RUN THE DEMO
 
@@ -23,46 +28,46 @@ This demo takes you through the initial steps of running the MPLAB harmony IDE
 * open the pubnub demo and place into c:\microchip\harmony\v1_03_01\apps
 * load & run the example into the MPLABX IDE.
 
-##STEPS IN DETAIL : 
-
-### hardware
-PIC32MX795F512L chip 
-
-PIC32 Ethernet Starter Board - This board provides a low-cost, modular development system for Microchip’s line of 32-bit microcontrollers.
-
-Standard A to mini B cable for debugger
-Standard A to micro B cable for USB application development
-Ethernet cable
-### software 
-
-
-MPLAB® X IDE is a software program that runs on a PC (Windows®, Mac OS®, Linux®) to develop applications for Microchip microcontrollers and digital signal controllers. It is called an Integrated Development Environment (IDE), because it provides a single integrated "environment" to develop code for embedded microcontrollers. 
-
-MPLAB® Harmony is a comprehensive, interoperable, tested software development framework for Microchip's PIC32 microcontrollers. The framework integrates both internal and 3rd party middleware, drivers, peripheral libraries and real time operating systems, simplifying and accelerating the 32-bit development process.
-
-We are including MPLAB harmony to the IDE to simplify the development process for the PIC32 microcontrollers.
-
-
-###Step 1: Prerequisites
-
-1. Install the [MPLAB X IDE] (http://www.microchip.com/mplabx) - v3.00.
-2. Install [MPLAB Harmony] (http://www.microchip.com/harmony) - v1.03.01.
-3. Install the [MPLAB XC32 C/C++ Compiler] (http://www.microchip.com/xc32).
-4. Set up a working [PIC32 development platform] (http://www.microchip.com/32bit) PIC32MX795F512L CAN BE USED AS PART OF THE ETHERNET STARTUP KIT. (http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004).
  
 
+### Hardware required:
+
+ - **PIC32 Ethernet Starter Kit** - The PIC32 Ethernet Starter Kit provides the easiest and lowest cost method to experience 10/100 Ethernet development with PIC32. The specific chip used is PIC32MX795F512L.
+
+ - Standard A to mini B cable for debugger
+ - Standard A to micro B cable for USB application development
+ 
+ - Ethernet cable
+ 
+### Software required:
+
+ - The **[Pubnub client library](https://github.com/pubnub/pic32-prod/tree/harmony)** for the Microchip Harmony framework. 
+
+ - **MPLAB® X IDE** is a software program that runs on a PC (Windows®, Mac OS®, Linux®) to develop applications for Microchip microcontrollers and digital signal controllers. It is called an Integrated Development Environment (IDE), because it provides a single integrated "environment" to develop code for embedded microcontrollers. 
+
+ - **MPLAB® Harmony** is a comprehensive, interoperable, tested software development framework for Microchip's PIC32 microcontrollers. The framework integrates both internal and 3rd party middleware, drivers, peripheral libraries and real time operating systems, simplifying and accelerating the 32-bit development process.
+MPLAB harmony is included to the IDE to simplify the development process for the PIC32 microcontrollers.
 
 
-###Introduction to Mplab harmony
+##STEPS IN DETAIL :
 
+### Prerequisites
+
+1. Install the [MPLAB X IDE](http://www.microchip.com/mplabx) - v3.00.
+2. Install [MPLAB Harmony](http://www.microchip.com/harmony) - v1.03.01.
+3. Install the [MPLAB XC32 C/C++ Compiler](http://www.microchip.com/xc32).
+4. Set up a working [PIC32 development platform](http://www.microchip.com/32bit).
+
+ 
+#### Including MPLAB Harmony within MPLAB IDE
 
 MPLAB Harmony provides a MPLAB Harmony Configurator (MHC) MPLAB-X IDE plug-in that can be installed in MPLAB X IDE to help you create your own MPLAB Harmony applications.
 
 To create a new MPLAB Harmony application with MHC, follow these four steps:
 
-**• Step 1: Install MHC**
+**Step 1: Install MHC**
 
-1. Start MPLAB X IDE and select Tools > Plugins.
+1. Start MPLAB X IDE and select Tools -> Plugins.
 2. Select the Downloaded tab and click Add Plugins..., and then navigate to the MHC com-microchip-mplab-modules-mhc.nbm plug-in file, which is located in <install-dir>/utilities/mhc, and then click Open.
 
 ![alt text](/images/step12.png)
@@ -76,39 +81,22 @@ To create a new MPLAB Harmony application with MHC, follow these four steps:
 4. Follow the prompts from the installation and continue until the installation completes. (Do not be concerned if the version you're installing is signed but not trusted, simply click Continue). Once the installation has finished you can close the Plugins dialog.
 5. To verify the installation, select Tools > Plugins and select the Installed tab. The MHC plug-in you installed should be included in the list.
 
-**• Step 2: Create the New Harmony Project**
 
+###Step 3: Running the PubNub PIC32 Harmony project
 
-1. Select File > New Project or click the New Project icon in MPLAB X IDE.
+To add Pubnub PIC32 Harmony library to your project, you have several options:
 
-2. In Categories, select Microchip Embedded and in Projects select MPLAB Harmony Project from the list of available project templates, and then click Next to launch the Microchip Harmony Configurator Project Wizard.
+ - Add the library project
+ - Add the generated library file
+ - Add the files from the library
 
-![alt text](/images/step2.2.png)
+I am going to be choosing the **first option**. In any case, you have to link against the Harmony library, because that is what Pubnub PIC32 Harmony library uses. We use the TCPIP, TCPIP_DNS, SYS_TMR, and, optionally, TCPIP_SSL modules from Harmony. 
 
+####Initial steps:
 
-3. Specify the following in the New Project dialog:
+1. Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
 
-	• Harmony Path (path to the folder containing Harmony framework: <install-dir>)
-
-	• Project Location (the default project path is the apps folder within the selected MPLAB 	Harmony path)
-
-	• Project Name
-
-	• Configuration Name (optional)
-
-	• Target Device (when a valid harmony path is selected, the device selection menu will be 	filled)
-	
-![alt text](/images/step2.3.png)
-
-
-
-
-###Step 3: Putting it all together
-
-
-Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
-
-Unzip/copy the contents of the library package to your Harmony apps directory. For example, on **Linux** this would be:
+2. Unzip/copy the contents of the library package to your Harmony apps directory. For example, on **Linux** this would be:
 
 `~/microchip/harmony/v1_03_01/apps`
 
@@ -128,10 +116,11 @@ pubnub_client
 
 The lib directory contains the Pubnub client Harmony (static) library. The firmware directory contains a sample project you can load to your MPLABX IDE and try it "out of the box".
 
-Step 3: running the pubnub client directly on the mplab ide  : 
-- Choose menu File|Open Project
+3. Running the pubnub client directly on the MPLAB IDE:
+ 
+ - Choose menu File|Open Project
 
-- In the dialog that pops up, go to directory: c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware
+ - In the dialog that pops up, go to directory: c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware
 
 - Then just click (not double-click) on the "pubnub_pic32_client.X". It is a directory, but, you'll see its icon is different than regular directories. It's actually a "project directory".
 
