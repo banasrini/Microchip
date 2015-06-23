@@ -38,6 +38,10 @@ http://g.recordit.co/nr3g85PC9O.gif
  - Standard A to micro B cable for USB application development
  
  - Ethernet cable
+ - Hardware setup needs to be as follows:
+ 
+ 	
+	 ![alt text](/images/hwsetup.jpg)
  
 ### Software required:
 
@@ -121,11 +125,6 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
 
 3. Running the pubnub client directly on the MPLAB IDE:
 
-
-	- Hardware setup needs to be as follows:
-	
-	 ![alt text](/images/hwsetup.jpg)
-
 	 - Choose menu File|Open Project
 
 	 - In the dialog that pops up, go to directory: c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware
@@ -147,7 +146,7 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
 
 ![alt text](/images/properties.png)
 
-- You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
+4. You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
 
 On the debug console you will see periodic messages from the board as below: 
 
