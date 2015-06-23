@@ -103,17 +103,20 @@ To create a new MPLAB Harmony application with MHC, follow these four steps:
 
 
 
-###Step 3: Getting Started 
-
-Unzip/copy the contents of the library package to your Harmony apps directory. For example, on Linux this would be:
-~/microchip/harmony/v1_03_01/apps
+###Step 3: Putting it all together
 
 
-On Windows, this would be:
-c:\microchip\harmony\v1_03_01\apps
+Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
+
+Unzip/copy the contents of the library package to your Harmony apps directory. For example, on **Linux** this would be:
+
+`~/microchip/harmony/v1_03_01/apps`
 
 
-Of course, you may unzip/copy to some other version of Harmony (other than v1_03_01).
+On **Windows**, this would be:
+
+`c:\microchip\harmony\v1_03_01\apps`
+
 This will create following basic directory structure under apps:
 pubnub_client
     |
@@ -124,12 +127,13 @@ pubnub_client
 
 
 The lib directory contains the Pubnub client Harmony (static) library. The firmware directory contains a sample project you can load to your MPLABX IDE and try it "out of the box".
+
 Step 3: running the pubnub client directly on the mplab ide  : 
 - Choose menu File|Open Project
 
 - In the dialog that pops up, go to directory: c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware
 
-- Then just click (not double-click) on the "pubnub_pic32_client.X" (it's possible that there is a typo, and it says "pubnup_pic32_client.X" :) ). It is a directory, but, you'll see its icon is different than regular directories. It's actually a "project directory".
+- Then just click (not double-click) on the "pubnub_pic32_client.X". It is a directory, but, you'll see its icon is different than regular directories. It's actually a "project directory".
 
 - When you click it, in the "Project Name" box on the right of the directory tree you'll see the name of the project ("pubnub_pic32_client"). Click "Open Project" button in the lower right (above "Cancel").
 
@@ -143,6 +147,10 @@ Step 3: running the pubnub client directly on the mplab ide  :
 
 Choose SKDE PIC32 as the starter kit.
 - Of course, have your dev board (Starter Kit) attached to an USB port.
+
+If you right click on the project name - pubnub_pic32_client, choose properties. Make sure the options chosen are as shown in the image.
+
+![alt text](/images/properties.png)
 
 - You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
 
