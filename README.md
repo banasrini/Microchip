@@ -87,7 +87,7 @@ To create a new MPLAB Harmony application with MHC, follow these steps:
 5. To verify the installation, select Tools > Plugins and select the Installed tab. The MHC plug-in you installed should be included in the list.
 
 
-###Step 3: Running the PubNub PIC32 Harmony project
+###Running the PubNub PIC32 Harmony project
 
 To add Pubnub PIC32 Harmony library to your project, you have several options:
 
@@ -97,7 +97,7 @@ To add Pubnub PIC32 Harmony library to your project, you have several options:
 
 I am going to be choosing the **first option**. In any case, you have to link against the Harmony library, because that is what Pubnub PIC32 Harmony library uses. We use the TCPIP, TCPIP_DNS, SYS_TMR, and, optionally, TCPIP_SSL modules from Harmony. 
 
-####Initial steps:
+
 
  - Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
 
@@ -150,10 +150,27 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
  - You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
  
 ### Demo output
+In order to see the output of this demo, open the [PubNub Developer Console](http://www.pubnub.com/console/), put in the **same** channel and the pub/sub keys as that in the code running in the IDE.
+If all went well, then after a few seconds, you will see constant messages from the MCU. The message you send will be seen on the console, and you may send the following message:
 
-If all went well, then after a few s
+```
+{"led":{"2":1}}
+```
+
+to turn the LED number 2 ON. 
+
+So, in general, the first number (quoted) is the number of the LED (on most boards there are LEDS 0 - 2), the second is 0 to turn OFF, or 1 to turn ON. So this should blink the LED 1:
+
+```
+{"led":{"1", 0}}
+{"led":{"1", 1}}
+{"led":{"1", 0}}
+{"led":{"1", 1}}
+```
 
 On the debug console you will see periodic messages from the board as below: 
+
+![alt text](/images/console.png)
 
 ### static to dynamic
 In order to change from the static demo to the dynamic version, go to source files -> apps -> apps.c, make the following changes.
