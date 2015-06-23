@@ -70,17 +70,20 @@ MPLAB Harmony provides a MPLAB Harmony Configurator (MHC) MPLAB-X IDE plug-in th
 To create a new MPLAB Harmony application with MHC, follow these steps:
 
 
-1. Start MPLAB X IDE and select Tools -> Plugins.
-2. Select the Downloaded tab and click Add Plugins..., and then navigate to the MHC com-microchip-mplab-modules-mhc.nbm plug-in file, which is located in <install-dir>/utilities/mhc, and then click Open.
+ - Start MPLAB X IDE and select Tools -> Plugins.
+ - Select the Downloaded tab and click Add Plugins..., and then navigate to the MHC com-microchip-mplab-modules-mhc.nbm plug-in file, which is located in <install-dir>/utilities/mhc, and then click Open.
 
 ![alt text](/images/step12.png)
-3. Ensure that the Install check box for the plug-in is selected and click Install.
+
+ - Ensure that the Install check box for the plug-in is selected and click Install.
 
 
 
 
+![alt text](/images/step1.3.png)
 
-![alt text](/images/step1.3.png)4. Follow the prompts from the installation and continue until the installation completes. (Do not be concerned if the version you're installing is signed but not trusted, simply click Continue). Once the installation has finished you can close the Plugins dialog.
+ - Follow the prompts from the installation and continue until the installation completes. (Do not be concerned if the version you're installing is signed but not trusted, simply click Continue). Once the installation has finished you can close the Plugins dialog.
+ 
 5. To verify the installation, select Tools > Plugins and select the Installed tab. The MHC plug-in you installed should be included in the list.
 
 
@@ -96,7 +99,7 @@ I am going to be choosing the **first option**. In any case, you have to link ag
 
 ####Initial steps:
 
-1. Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
+ - Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
 
 2. Unzip/copy the contents of the library package to your Harmony apps directory. For example, on **Linux** this would be:
 
@@ -121,7 +124,7 @@ pubnub_client
 
 The lib directory contains the Pubnub client Harmony (static) library. The firmware directory contains a sample project you can load to your MPLABX IDE and try it "out of the box".
 
-3. Running the pubnub client directly on the MPLAB IDE:
+ - Running the pubnub client directly on the MPLAB IDE:
 
 	 - Choose menu File|Open Project
 
@@ -144,7 +147,11 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
 
 ![alt text](/images/properties.png)
 
-4. You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
+ - You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
+ 
+### Demo output
+
+If all went well, then after a few s
 
 On the debug console you will see periodic messages from the board as below: 
 
