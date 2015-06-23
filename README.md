@@ -106,6 +106,8 @@ On **Windows**, this would be:
 `c:\microchip\harmony\v1_03_01\apps`
 
 This will create following basic directory structure under apps:
+
+```
 pubnub_client
     |
     +--pubnub_pic32_client
@@ -113,31 +115,35 @@ pubnub_client
         +--lib
         +--firmware
 
+```
 
 The lib directory contains the Pubnub client Harmony (static) library. The firmware directory contains a sample project you can load to your MPLABX IDE and try it "out of the box".
 
 3. Running the pubnub client directly on the MPLAB IDE:
- 
- - Choose menu File|Open Project
-
- - In the dialog that pops up, go to directory: c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware
-
-- Then just click (not double-click) on the "pubnub_pic32_client.X". It is a directory, but, you'll see its icon is different than regular directories. It's actually a "project directory".
-
-- When you click it, in the "Project Name" box on the right of the directory tree you'll see the name of the project ("pubnub_pic32_client"). Click "Open Project" button in the lower right (above "Cancel").
-
-- When it loads (it will take a few seconds, you can monitor the progress in the status bar at the bottom of the window), first select the right configuration. The easiest way to do it is to go to the "command bar" (just under the menu) and click on the drop down box that is between the "Redo" and "Build Project" icons. You'll see three options:
-
-* pic32mx_eth_sk : choose this if you're using PIC32 Ethernet Starter Kit
-* pic32mx_eth_sk2 : choose this if you're using PIC32 Ethernet Starter Kit II
-* pic32mz_ec_sk : choose this if you're using PIC32MZ EC Starter Kit
 
 
+	- Hardware setup needs to be as follows:
+	
+	 ![alt text](/images/hwsetup.jpg)
 
-Choose SKDE PIC32 as the starter kit.
-- Of course, have your dev board (Starter Kit) attached to an USB port.
+	 - Choose menu File|Open Project
 
-If you right click on the project name - pubnub_pic32_client, choose properties. Make sure the options chosen are as shown in the image.
+	 - In the dialog that pops up, go to directory: c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware
+
+	- Then just click (not double-click) on the "pubnub_pic32_client.X". It is a directory, but, you'll see its icon is different than regular directories. It's actually a "project directory".
+
+	- When you click it, in the "Project Name" box on the right of the directory tree you'll see the name of the project ("pubnub_pic32_client"). Click "Open Project" button in the lower right (above "Cancel").
+
+	- When it loads (it will take a few seconds, you can monitor the progress in the status bar at the bottom of the window), first select the right configuration. The easiest way to do it is to go to the "command bar" (just under the menu) and click on the drop down box that is between the "Redo" and "Build Project" icons. You'll see three options:
+
+		* pic32mx_eth_sk : choose this if you're using PIC32 Ethernet Starter Kit
+		* pic32mx_eth_sk2 : choose this if you're using PIC32 Ethernet Starter Kit II
+		* pic32mz_ec_sk : choose this if you're using PIC32MZ EC Starter Kit
+
+
+ 	- Choose SKDE PIC32 as the starter kit.
+
+ 	- Right click on the project name - `pubnub_pic32_client`, choose properties. Make sure the options chosen are as shown in the image below.
 
 ![alt text](/images/properties.png)
 
