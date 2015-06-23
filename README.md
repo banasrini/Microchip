@@ -67,22 +67,20 @@ MPLAB harmony is included to the IDE to simplify the development process for the
 
 MPLAB Harmony provides a MPLAB Harmony Configurator (MHC) MPLAB-X IDE plug-in that can be installed in MPLAB X IDE to help you create your own MPLAB Harmony applications.
 
-To create a new MPLAB Harmony application with MHC, follow these four steps:
+To create a new MPLAB Harmony application with MHC, follow these steps:
 
-**Step 1: Install MHC**
 
 1. Start MPLAB X IDE and select Tools -> Plugins.
 2. Select the Downloaded tab and click Add Plugins..., and then navigate to the MHC com-microchip-mplab-modules-mhc.nbm plug-in file, which is located in <install-dir>/utilities/mhc, and then click Open.
 
 ![alt text](/images/step12.png)
-
-
 3. Ensure that the Install check box for the plug-in is selected and click Install.
 
-![alt text](/images/step1.3.png)
 
 
-4. Follow the prompts from the installation and continue until the installation completes. (Do not be concerned if the version you're installing is signed but not trusted, simply click Continue). Once the installation has finished you can close the Plugins dialog.
+
+
+![alt text](/images/step1.3.png)4. Follow the prompts from the installation and continue until the installation completes. (Do not be concerned if the version you're installing is signed but not trusted, simply click Continue). Once the installation has finished you can close the Plugins dialog.
 5. To verify the installation, select Tools > Plugins and select the Installed tab. The MHC plug-in you installed should be included in the list.
 
 
