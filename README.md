@@ -1,17 +1,18 @@
-DOCUMENTED IN THE ORDER THAT i INSTALLED AND RAN THE PROGRAM
-
-Blog headings
 
 ### Introduction
 
-At PubNub, we are always trying to integrate with new hardware and this time it is Microchip Technology. The number of platforms we support only keep increasing everyday, and we are super excited to announce this latest hardware addition.   
+At PubNub, we are always trying to integrate our realtime software with new hardware, and this time it is with Microchip Technology. The number of platforms we support only keep increasing everyday, and we are super excited to announce this latest hardware addition.   
 
 
-### what is microchip, what is pubnub
+### What is microchip, what is pubnub
 
-Microchip Technology is an American manufacturer of microcontroller, memory and analog semiconductors. Its products include microcontrollers and we are going to be focussing on the PIC32 series. PubNub on the other hand is a [global datastream network](http://www.pubnub.com) that lets you build and scale realtime applications for IOT, Mobile and web. With PubNub and Microchip you can build out cloud connected embedded systems. Remote control of devices, push notifications, status updates and monitoring of home security systems, health monitoring and home automation systems are some of the cool projects that can be built by this collaboration.
+[Microchip Technology]() is an American manufacturer of microcontroller, memory and analog semiconductors. Its products include microcontrollers and we are going to be focussing on the PIC32 series. 
 
-### what the demo is about- concept
+[PubNub](http://www.pubnub.com) on the other hand is a global datastream network that lets you build and scale realtime applications for IOT, Mobile and web. 
+
+By running PubNub on Microchip Technology's MCUs, you can build out realtime cloud connected embedded systems such as remote control of devices, push notifications, status updates and monitoring of home security systems, health monitoring and home automation systems.
+
+### Demo concept
 
 This demo shows you how to run PubNub on Microchip, in order to facilitate realtime communication between Microchip hardware and any other device, be it mobile or web. This will power IoT, allowing for bi-directional flow of data between different endpoints to and from Microchip hardware. I will show you how to control the LEDs on the [Ethernet starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004) from Microchip, and to send messages from the chip to the [PubNub Developer console](http://www.pubnub.com/console/). 
 
@@ -24,18 +25,12 @@ http://g.recordit.co/nr3g85PC9O.gif
 
 
 
-##OVERALL STEPS TO RUN THE DEMO
-
-* install mplab ide and harmony and the compiler.
-* include the mph plugin into the ide.
-* open the pubnub demo and place into c:\microchip\harmony\v1_03_01\apps
-* load & run the example into the MPLABX IDE.
-
+## What do you need for this demo?
  
 
 ### Hardware required:
 
- - **PIC32 Ethernet Starter Kit** - The PIC32 Ethernet Starter Kit provides the easiest and lowest cost method to experience 10/100 Ethernet development with PIC32. The specific chip used is PIC32MX795F512L.
+ - **PIC32 Ethernet Starter Kit** - The PIC32 Ethernet Starter Kit provides the easiest and lowest cost method to experience 10/100 Ethernet development with PIC32. The specific chip used on the board is PIC32MX795F512L.
 
  - Standard A to mini B cable for debugger
  - Standard A to micro B cable for USB application development
@@ -48,15 +43,16 @@ http://g.recordit.co/nr3g85PC9O.gif
  
 ### Software required:
 
- - The **[Pubnub client library](https://github.com/pubnub/pic32-prod/tree/harmony)** for the Microchip Harmony framework. 
+ - The **[Pubnub client library](https://github.com/pubnub/pic32-prod/tree/harmony)** on Github for the Microchip Harmony framework. 
 
  - **MPLAB® X IDE** is a software program that runs on a PC (Windows®, Mac OS®, Linux®) to develop applications for Microchip microcontrollers and digital signal controllers. It is called an Integrated Development Environment (IDE), because it provides a single integrated "environment" to develop code for embedded microcontrollers. 
 
  - **MPLAB® Harmony** is a comprehensive, interoperable, tested software development framework for Microchip's PIC32 microcontrollers. The framework integrates both internal and 3rd party middleware, drivers, peripheral libraries and real time operating systems, simplifying and accelerating the 32-bit development process.
+ 
 MPLAB harmony is included to the IDE to simplify the development process for the PIC32 microcontrollers.
 
 
-##STEPS IN DETAIL :
+## How to run this demo?
 
 ### Prerequisites
 
