@@ -83,7 +83,7 @@ To create a new MPLAB Harmony application with MHC, follow these steps:
 
  - Follow the prompts from the installation and continue until the installation completes. (Do not be concerned if the version you're installing is signed but not trusted, simply click Continue). Once the installation has finished you can close the Plugins dialog.
  
-5. To verify the installation, select Tools > Plugins and select the Installed tab. The MHC plug-in you installed should be included in the list.
+ - To verify the installation, select Tools > Plugins and select the Installed tab. The MHC plug-in you installed should be included in the list.
 
 
 ###Running the PubNub PIC32 Harmony project
