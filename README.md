@@ -16,6 +16,9 @@ Microchip Technology is an American manufacturer of microcontroller, memory and 
 This demo shows you how to run PubNub on Microchip, in order to facilitate realtime communication between Microchip hardware and any other device, be it mobile or web. This will power IoT, allowing for bi-directional flow of data between different endpoints to and from Microchip hardware. I will show you how to control the LEDs on the [Ethernet starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004) from Microchip, and to send messages from the chip to the [PubNub Developer console](http://www.pubnub.com/console/). 
 
 IMAGE FOR THE DEMO - JUST LIKE THE ATMEL ONE. 
+IMAGE FOR PubNub + MICROCHIP 
+
+EXPLAIN PUB SUB AND HOW PUBNUB WORKS.
 
 http://g.recordit.co/nr3g85PC9O.gif 
 
@@ -171,6 +174,8 @@ So, in general, the first number (quoted) is the number of the LED (on most boar
 On the debug console you will see periodic messages from the board as below: 
 
 ![alt text](/images/console.png)
+
+As you can see, I have set the channel, pub and sub keys. The messages box shows me the messages I have sent, History gives me the messages sent and received and sent on the `channel` that I have set. Using the message box, I am able to send messages to the MCU to turn on and off the LEDs on the board itself.
 
 ### static to dynamic
 In order to change from the static demo to the dynamic version, go to source files -> apps -> apps.c, make the following changes.
