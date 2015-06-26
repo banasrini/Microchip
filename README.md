@@ -16,7 +16,9 @@ By running PubNub on Microchip Technology's MCUs, you can build out realtime clo
 
 This demo shows you how to run PubNub on Microchip, in order to facilitate realtime communication between Microchip hardware and any other device, be it mobile or web. This will power IoT, allowing for bi-directional flow of data between different endpoints to and from Microchip hardware. I will show you how to control the LEDs on the [Ethernet starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004) from Microchip, and to send messages from the chip to the [PubNub Developer console](http://www.pubnub.com/console/). 
 
-IMAGE FOR THE DEMO - JUST LIKE THE ATMEL ONE. 
+
+![alt text](/images/democoncept.png)
+
 IMAGE FOR PubNub + MICROCHIP 
 
 EXPLAIN PUB SUB AND HOW PUBNUB WORKS.
