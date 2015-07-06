@@ -1,7 +1,7 @@
 
 ### Introduction
 
-At PubNub, we are always trying to integrate our realtime software with new hardware, and this time it is with Microchip Technology. The number of platforms we support only keep increasing everyday, and we are super excited to announce this latest hardware addition.   
+At PubNub, we are always integrating our realtime software with new hardware, and this time it is with Microchip Technology. The number of platforms we support only keep increasing everyday, and we are super excited to announce this latest hardware addition.   
 
 
 ### What is microchip, what is pubnub?
