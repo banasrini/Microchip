@@ -8,7 +8,7 @@ At PubNub, we are always integrating our realtime software with new hardware, an
 
 [Microchip Technology](http://www.microchip.com) is an American manufacturer of microcontroller, memory and analog semiconductors. Its products include microcontrollers and we are going to be focussing on the PIC32 series. 
 
-[PubNub](http://www.pubnub.com) on the other hand is a global datastream network that lets you build and scale realtime applications for IOT, Mobile and web. 
+[PubNub](http://www.pubnub.com) on the other hand is a global datastream network that lets you build and scale realtime applications for IoT, Mobile and web. 
 
 By running PubNub on Microchip Technology's MCUs, you can build realtime cloud connected embedded systems such as remote control of devices, status updates from sensors,  home security and home automation systems.
 
@@ -140,11 +140,9 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
 
 	 - Choose menu File|Open Project
 
-	 - In the dialog that pops up, go to directory: c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware
+	 - In the dialog that pops up, go to directory: **c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware**
 
-	- Then just click on the "pubnub_pic32_client.X". 
-
-	- When you click it, in the "Project Name" box on the right of the directory tree you'll see the name of the project ("pubnub_pic32_client"). Click "Open Project" button in the lower right (above "Cancel").
+	- Then just click on the **"pubnub_pic32_client.X"**. 
 
 	- When it loads (it will take a few seconds, you can monitor the progress in the status bar at the bottom of the window).
 	
@@ -157,7 +155,7 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
 
  	- Right click on the project name - `pubnub_pic32_client`, choose properties. Make sure the options chosen are as shown in the image below.
 
-![alt text](/images/properties.png)
+ ![alt text](/images/properties.png)
 
  - You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
  
@@ -168,6 +166,8 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
 
 In order to see the output of this demo, open the [PubNub Developer Console](http://www.pubnub.com/console/), put in the **same** channel and the pub/sub keys as that in the code running in the IDE.
 
+**Note:** You will find the channel and pub/sub keys in `pubnubStaticDemo.c` or `pubnubDemo.c` depending on whether you use the static or dynamic version. 
+
 
 ####PubNub Publish
 
@@ -176,6 +176,8 @@ If all went well, then after a few seconds, you will see constant messages from 
 ![alt text](/images/publish.png)
 
 The MCU publishes messages (purposely set to do every few seconds), which is received by the console. Publish is broadcasting a message onto a specific channel. Options contains channel name, message, and callback values.
+
+This is **PubNub publish** from the board to any other device.
 
 ####PubNub Subscribe
 
@@ -195,6 +197,8 @@ So, in general, the first number (quoted) is the number of the LED (on most boar
 {"led":{"1", 0}}
 {"led":{"1", 1}}
 ```
+
+This is the board **subscribing** to any other device.
 
 ####Complete Output
 
