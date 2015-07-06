@@ -4,23 +4,22 @@
 At PubNub, we are always trying to integrate our realtime software with new hardware, and this time it is with Microchip Technology. The number of platforms we support only keep increasing everyday, and we are super excited to announce this latest hardware addition.   
 
 
-### What is microchip, what is pubnub
+### What is microchip, what is pubnub?
 
 [Microchip Technology]() is an American manufacturer of microcontroller, memory and analog semiconductors. Its products include microcontrollers and we are going to be focussing on the PIC32 series. 
 
 [PubNub](http://www.pubnub.com) on the other hand is a global datastream network that lets you build and scale realtime applications for IOT, Mobile and web. 
 
-By running PubNub on Microchip Technology's MCUs, you can build out realtime cloud connected embedded systems such as remote control of devices, push notifications, status updates and monitoring of home security systems, health monitoring and home automation systems.
+By running PubNub on Microchip Technology's MCUs, you can build out realtime cloud connected embedded systems such as remote control of devices, status updates from sensors,  home security and home automation systems.
 
-### Demo concept
+### Combining the two
 
 This demo shows you how to run PubNub on Microchip, in order to facilitate realtime communication between Microchip hardware and any other device, be it mobile or web. This will power IoT, allowing for bi-directional flow of data between different endpoints to and from Microchip hardware. I will show you how to control the LEDs on the [Ethernet starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004) from Microchip, and to send messages from the chip to the [PubNub Developer console](http://www.pubnub.com/console/). 
 
 
 ![alt text](/images/democoncept.png)
 
-1. The Microchip Ethernet starter kit runs PubNub and is measuring some data through an board sensor. 
-2. This connects to the internet and PubNub through a gateway router.
+1. The Microchip Ethernet starter kit runs PubNub and is measuring some data through an onboard sensor. 
 3. The PubNub code running on the chip enables it to **publish** the sensor reading(for example) in real time to any other chip or device **subscribing** to the same channel as a data stream.
 4. This information is duplicated on all the PubNub data centers and gets routed according to the location of the devices.
 5. Through the [pubnub developer console](http://www.pubnub.com/console/), you can receive this stream of information from as many sensors as you like in real time. 
@@ -36,10 +35,10 @@ http://g.recordit.co/nr3g85PC9O.gif
 
 
 
-## What do you need for this demo?
+## What you will need
  
 
-### Hardware required:
+### Hardware:
 
  - **PIC32 Ethernet Starter Kit** - The PIC32 Ethernet Starter Kit provides the easiest and lowest cost method to experience 10/100 Ethernet development with PIC32. The specific chip used on the board is PIC32MX795F512L.
 
@@ -52,7 +51,7 @@ http://g.recordit.co/nr3g85PC9O.gif
  	
 	 ![alt text](/images/hwsetup.jpg)
  
-### Software required:
+### Software:
 
  - The **[Pubnub client library](https://github.com/pubnub/pic32-prod/tree/harmony)** on Github for the Microchip Harmony framework. 
 
@@ -63,17 +62,19 @@ http://g.recordit.co/nr3g85PC9O.gif
 MPLAB harmony is included to the IDE to simplify the development process for the PIC32 microcontrollers.
 
 
-## How to run this demo?
+## How to run PubNub on the board?
 
 ### Prerequisites
 
-1. Install the [MPLAB X IDE](http://www.microchip.com/mplabx) - v3.00.
-2. Install [MPLAB Harmony](http://www.microchip.com/harmony) - v1.03.01.
-3. Install the [MPLAB XC32 C/C++ Compiler](http://www.microchip.com/xc32).
+On your computer, install the following:
+
+1. [MPLAB X IDE](http://www.microchip.com/mplabx) - v3.00.
+2. [MPLAB Harmony](http://www.microchip.com/harmony) - v1.03.01.
+3. [MPLAB XC32 C/C++ Compiler](http://www.microchip.com/xc32).
 4. Set up a working [PIC32 development platform](http://www.microchip.com/32bit).
 
  
-#### Including MPLAB Harmony within MPLAB IDE
+#### Including MPLAB Harmony Configurator within MPLAB IDE
 
 MPLAB Harmony provides a MPLAB Harmony Configurator (MHC) MPLAB-X IDE plug-in that can be installed in MPLAB X IDE to help you create your own MPLAB Harmony applications.
 
@@ -111,14 +112,16 @@ I am going to be choosing the **first option**. In any case, you have to link ag
 
  - Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
 
-2. Unzip/copy the contents of the library package to your Harmony apps directory. For example, on **Linux** this would be:
+2. Unzip/copy the contents of the library package to your Harmony apps directory. 
 
-`~/microchip/harmony/v1_03_01/apps`
+	 - For example, on **Linux** this would be:
+
+			`~/microchip/harmony/v1_03_01/apps`
 
 
-On **Windows**, this would be:
+	 - On **Windows**, this would be:
 
-`c:\microchip\harmony\v1_03_01\apps`
+			`c:\microchip\harmony\v1_03_01\apps`
 
 This will create following basic directory structure under apps:
 
@@ -140,18 +143,18 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
 
 	 - In the dialog that pops up, go to directory: c:\microchip\harmony\v1_03_01\apps\pubnub_client\pubnub_pic32_client\firmware
 
-	- Then just click (not double-click) on the "pubnub_pic32_client.X". It is a directory, but, you'll see its icon is different than regular directories. It's actually a "project directory".
+	- Then just click on the "pubnub_pic32_client.X". 
 
 	- When you click it, in the "Project Name" box on the right of the directory tree you'll see the name of the project ("pubnub_pic32_client"). Click "Open Project" button in the lower right (above "Cancel").
 
-	- When it loads (it will take a few seconds, you can monitor the progress in the status bar at the bottom of the window), first select the right configuration. The easiest way to do it is to go to the "command bar" (just under the menu) and click on the drop down box that is between the "Redo" and "Build Project" icons. You'll see three options:
+	- When it loads (it will take a few seconds, you can monitor the progress in the status bar at the bottom of the window).
+	
+	- First select the right configuration. The easiest way to do it is to go to the "command bar" (just under the menu) and click on the drop down box that is between the "Redo" and "Build Project" icons. You'll see three options:
 
-		* pic32mx_eth_sk : choose this if you're using PIC32 Ethernet Starter Kit
-		* pic32mx_eth_sk2 : choose this if you're using PIC32 Ethernet Starter Kit II
-		* pic32mz_ec_sk : choose this if you're using PIC32MZ EC Starter Kit
+			* pic32mx_eth_sk : choose this if you're using PIC32 Ethernet Starter Kit
+			* pic32mx_eth_sk2 : choose this if you're using PIC32 Ethernet Starter Kit II
+			* pic32mz_ec_sk : choose this if you're using PIC32MZ EC Starter Kit
 
-
- 	- Choose SKDE PIC32 as the starter kit.
 
  	- Right click on the project name - `pubnub_pic32_client`, choose properties. Make sure the options chosen are as shown in the image below.
 
@@ -159,9 +162,25 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
 
  - You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
  
-### Demo output
+ ![alt text](/images/run.png)
+ 
+### Output
+
+
 In order to see the output of this demo, open the [PubNub Developer Console](http://www.pubnub.com/console/), put in the **same** channel and the pub/sub keys as that in the code running in the IDE.
-If all went well, then after a few seconds, you will see constant messages from the MCU. The message you send will be seen on the console, and you may send the following message:
+
+
+####PubNub Publish
+
+If all went well, then after a few seconds, you will see constant messages from the MCU. 
+
+![alt text](/images/publish.png)
+
+The MCU publishes messages (purposely set to do every few seconds), which is received by the console. Publish is broadcasting a message onto a specific channel. Options contains channel name, message, and callback values.
+
+####PubNub Subscribe
+
+You may send the following message:
 
 ```
 {"led":{"2":1}}
@@ -178,32 +197,20 @@ So, in general, the first number (quoted) is the number of the LED (on most boar
 {"led":{"1", 1}}
 ```
 
-On the debug console you will see periodic messages from the board as below: 
+####Complete Output
 
 ![alt text](/images/console.png)
 
 As you can see, I have set the channel, pub and sub keys. The messages box shows me the messages I have sent, History gives me the messages sent and received and sent on the `channel` that I have set. Using the message box, I am able to send messages to the MCU to turn on and off the LEDs on the board itself.
 
-### static to dynamic
-In order to change from the static demo to the dynamic version, go to source files -> apps -> apps.c, make the following changes.
-comment all the static demo functions such as pubnubStaticDemo.c(), PubnubStaticDemoInit() and PubnubStaticDemoProcess()
-Add pubnubDemo.c, PubnubDemoInit, PubnubDemoProcess.
-Now run the program, make sure you have the same channel and key names on the debug console. 
+###What next?
 
-
-##Debugging : 
-
-While running the program, if you choose the wrong starter kit(red bullet point), you wont see any thing happen. Make sure you choose a kit with a green bullet. 
+Being able to talk to your mobile and web devices from your hardware hasn't been this easy. PubNub runs on  70+ SDKs, letting you choose from a wide variety of platforms to communicate with the Microchip hardware. Many companies are using PubNub to solve their IoT use cases like home automation, taxi dispatch services, logistics, fleet management and device control.  All these companies focussed on building what they do best, and left the realtime communication infrastructure maintenance to PubNub. 
 
 
 
-Make sure you choose the right starter kit. 
-MPLABX works like this: it has some "debug/run tool" saved in the project (the one last used). When you start debugging/running, it checks to see if the one from the project is available. If it is, cool, it proceeds to use it. If not, it will prompt you to choose one. Those red ones are the ones that are not available. 
 
-The green ones (with a serial number) are the ones that are available that you can choose - of course, if there is more than one "green", you have to choose the right one, so it's best to have only one connected, so that you can't go wrong.
 
-2.Available LEDs (on all starter kits) are LED 0, LED 1 and LED 2. So, never used LED "3" - it doesn't exist.
-- On some Starter Kits / some configurations, some LEDs actually don't work. So, try them all.
 
 
 
