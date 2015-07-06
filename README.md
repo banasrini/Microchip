@@ -70,7 +70,7 @@ On your computer, install the following:
 
 1. [MPLAB X IDE](http://www.microchip.com/mplabx) - v3.00.
 2. [MPLAB Harmony](http://www.microchip.com/harmony) - v1.03.01.
-3. [MPLAB XC32 C/C++ Compiler](http://www.microchip.com/xc32).s
+3. [MPLAB XC32 C/C++ Compiler](http://www.microchip.com/xc32)
 
  
 #### Including MPLAB Harmony Configurator within MPLAB IDE
@@ -111,7 +111,7 @@ I am going to be choosing the **first option**. In any case, you have to link ag
 
  - Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
 
-2. Unzip/copy the contents of the library package to your Harmony apps directory. 
+ - Unzip/copy the contents of the library package to your Harmony apps directory. 
 
 	 - For example, on **Linux** this would be:
 
