@@ -168,6 +168,8 @@ In order to see the output of this demo, open the [PubNub Developer Console](htt
 
 **Note:** You will find the channel and pub/sub keys in `pubnubStaticDemo.c` or `pubnubDemo.c` depending on whether you use the static or dynamic version. 
 
+![alt text](/images/parameter.png)
+
 
 ####PubNub Publish
 
