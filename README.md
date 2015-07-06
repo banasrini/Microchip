@@ -4,17 +4,17 @@
 At PubNub, we are always integrating our realtime software with new hardware, and this time it is with Microchip Technology. The number of platforms we support only keep increasing everyday, and we are super excited to announce this latest hardware addition.   
 
 
-### What is microchip, what is pubnub?
+### What is Microchip Technology, what is PubNub?
 
-[Microchip Technology]() is an American manufacturer of microcontroller, memory and analog semiconductors. Its products include microcontrollers and we are going to be focussing on the PIC32 series. 
+[Microchip Technology](http://www.microchip.com) is an American manufacturer of microcontroller, memory and analog semiconductors. Its products include microcontrollers and we are going to be focussing on the PIC32 series. 
 
 [PubNub](http://www.pubnub.com) on the other hand is a global datastream network that lets you build and scale realtime applications for IOT, Mobile and web. 
 
-By running PubNub on Microchip Technology's MCUs, you can build out realtime cloud connected embedded systems such as remote control of devices, status updates from sensors,  home security and home automation systems.
+By running PubNub on Microchip Technology's MCUs, you can build realtime cloud connected embedded systems such as remote control of devices, status updates from sensors,  home security and home automation systems.
 
 ### Combining the two
 
-This demo shows you how to run PubNub on Microchip, in order to facilitate realtime communication between Microchip hardware and any other device, be it mobile or web. This will power IoT, allowing for bi-directional flow of data between different endpoints to and from Microchip hardware. I will show you how to control the LEDs on the [Ethernet starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004) from Microchip, and to send messages from the chip to the [PubNub Developer console](http://www.pubnub.com/console/). 
+This demo shows you how to run PubNub on Microchip, in order to facilitate realtime communication between Microchip hardware and any other device, be it mobile or web. This will power IoT, allowing for bi-directional flow of data between different endpoints to and from Microchip hardware. I will show you how to control the LEDs on the [Ethernet starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004) from a PC or mobile device, and to send messages from the chip to any other device as well. 
 
 
 ![alt text](/images/democoncept.png)
@@ -29,9 +29,9 @@ This demo shows you how to run PubNub on Microchip, in order to facilitate realt
 
 IMAGE FOR PubNub + MICROCHIP 
 
-EXPLAIN PUB SUB AND HOW PUBNUB WORKS.
 
-http://g.recordit.co/nr3g85PC9O.gif 
+
+Embed this - http://g.recordit.co/nr3g85PC9O.gif 
 
 
 
@@ -70,8 +70,7 @@ On your computer, install the following:
 
 1. [MPLAB X IDE](http://www.microchip.com/mplabx) - v3.00.
 2. [MPLAB Harmony](http://www.microchip.com/harmony) - v1.03.01.
-3. [MPLAB XC32 C/C++ Compiler](http://www.microchip.com/xc32).
-4. Set up a working [PIC32 development platform](http://www.microchip.com/32bit).
+3. [MPLAB XC32 C/C++ Compiler](http://www.microchip.com/xc32).s
 
  
 #### Including MPLAB Harmony Configurator within MPLAB IDE
