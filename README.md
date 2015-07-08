@@ -17,11 +17,10 @@ By running PubNub on Microchip Technology's MCUs, you can build realtime cloud c
 This demo shows you how to run PubNub on Microchip, in order to facilitate realtime communication between Microchip hardware and any other device, be it mobile or web. This will power IoT, allowing for bi-directional flow of data between different endpoints to and from Microchip hardware. I will show you how to control the LEDs on the [Ethernet starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=DM320004) from a PC or mobile device, and to send messages from the chip to any other device as well. 
 
 
-![alt text](/images/democoncept.png)
+![alt text](/images/democon.png)
 
-1. The Microchip Ethernet starter kit runs PubNub and is measuring some data through an onboard sensor. 
+1. The Microchip Ethernet starter kit runs PubNub. 
 3. The PubNub code running on the chip enables it to **publish** the sensor reading(for example) in real time to any other chip or device **subscribing** to the same channel as a data stream.
-4. This information is duplicated on all the PubNub data centers and gets routed according to the location of the devices.
 5. Through the [pubnub developer console](http://www.pubnub.com/console/), you can receive this stream of information from as many sensors as you like in real time. 
 6. Since the board is also subscribing, you can send control messages to the board from the console as well. 
 7. Using [Project Eon](http://www.pubnub.com/developers/eon/), you can also visualize the data received from the sensor in realtime through graphs and charts. 
