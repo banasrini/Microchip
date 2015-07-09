@@ -52,7 +52,7 @@ Embed this - http://g.recordit.co/nr3g85PC9O.gif
  
 ### Software:
 
- - The **[Pubnub client library](https://github.com/pubnub/pic32-prod/tree/harmony)** on Github for the Microchip Harmony framework. 
+ - The **[Pubnub client library](https://github.com/pubnub/pic32-prod/tree/harmony)** on Github for the Microchip Harmony framework. You can download the zipped file from the [latest release](https://github.com/pubnub/pic32-prod/releases).
 
  - **MPLAB® X IDE** is a software program that runs on a PC (Windows®, Mac OS®, Linux®) to develop applications for Microchip microcontrollers and digital signal controllers. It is called an Integrated Development Environment (IDE), because it provides a single integrated "environment" to develop code for embedded microcontrollers. 
 
@@ -108,7 +108,7 @@ I am going to be choosing the **first option**. In any case, you have to link ag
 
 
 
- - Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/tree/harmony) and download the zip file. 
+ - Go to the [Pic32 Github repository](https://github.com/pubnub/pic32-prod/releases) and download the zip file. 
 
  - Unzip/copy the contents of the library package to your Harmony apps directory. 
 
@@ -133,7 +133,7 @@ pubnub_client
 
 ```
 
-The lib directory contains the Pubnub client Harmony (static) library. The firmware directory contains a sample project you can load to your MPLABX IDE and try it "out of the box".
+The **lib** directory contains the Pubnub client Harmony (static) library. The **firmware** directory contains a sample project you can load to your MPLABX IDE and try it "out of the box".
 
  - Running the pubnub client directly on the MPLAB IDE:
 
@@ -155,11 +155,22 @@ The lib directory contains the Pubnub client Harmony (static) library. The firmw
  	- Right click on the project name - `pubnub_pic32_client`, choose properties. Make sure the options chosen are as shown in the image below.
 
  ![alt text](/images/properties.png)
+ 
+ 	- In order to receive and send messages through the PubNub network, you will need to set your publish subscribe keys in the program.
+ 	
+ ![alt text](/images/staticparam.png)
 
  - You should be all set up. Now choose menu Run|Run Project. It will build and then upload the firmware to the board and then reset it (so that FW starts executing). You can monitor this in the "Output" window, below the code editor window.
  
  ![alt text](/images/run.png)
  
+####Static vs Dynamic API
+
+The PubNub Harmony library has two APIs - **static and dynamic**. 
+
+* simple / static for low traffic / low communication complexity setups. This example performs a continuous publish and subscribe.* complex / dynamic for all other setups. The dynamic example performs a single publish and a continuous subscribe.
+By default, this demo runs the static version. But changing it from static to dynamic is as simple as linking  pubnubDemo.c instead of pubnubStaticDemo.c and change calls from PubnubStaticDemoInit() to PubnubDemoInit() and from PubnubStaticDemoProcess() to PubnubDemoProcess().
+
 ### Output
 
 
